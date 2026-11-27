@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Auto Mecânica | Oficina Mecânica em São Luís - MA</title>
+<meta name="description" content="RD Auto Mecânica em São Luís - MA: mecânica geral, diagnóstico e injeção eletrônica, suspensão, freios, embreagem e 4x4. Nacionais e importados. Revisão grátis na compra do óleo.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="RD Auto Mecânica | Oficina em São Luís - MA">
+<meta property="og:description" content="Mecânica geral, diagnóstico, suspensão, freios e 4x4. Nacionais e importados. Nota 5,0 no Google.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/webp" href="assets/img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="loading">
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="pre-panel pre-top"></div>
+  <div class="pre-panel pre-bot" id="preBot"></div>
+  <div class="pre-center">
+    <img class="pre-logo" src="assets/img/logo.webp" alt="">
+    <div class="pre-count"><b id="preNum">0</b><span>%</span></div>
+    <div class="pre-label">Aquecendo o motor</div>
+  </div>
+</div>
+
+<div class="progress-bar" id="progress"></div>
+<div class="grain"></div>
+<canvas id="sparkCanvas"></canvas>
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-ring" id="cRing"></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="#inicio" class="logo" data-hover><img src="assets/img/logo.webp" alt="Logo RD Auto Mecânica"><span>RD <b>Auto Mecânica</b></span></a>
+    <ul class="menu" id="menu">
+      <li class="menu-pill" id="menuPill"></li>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5598988233321" target="_blank" rel="noopener" class="btn-whats-header magnetic"><i class="fa-brands fa-whatsapp"></i><span class="num">(98) 98823-3321</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu"><div>
+    <a href="#inicio">Início <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#servicos">Serviços <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#sobre">Sobre <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#galeria">Galeria <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#avaliacoes">Avaliações <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="#contato">Contato <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="https://wa.me/5598988233321" target="_blank" rel="noopener" class="btn-whats-header"><i class="fa-brands fa-whatsapp"></i> (98) 98823-3321</a>
+  </div></div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-grid-bg"></div>
+  <canvas id="heroSparks"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-card">
+      <div class="badge-row fade-up d1">
+        <span class="badge"><i class="fa-solid fa-gear"></i><span class="shiny">OFICINA ESPECIALIZADA</span></span>
+        <span class="status" id="status"><span class="dot"></span><span id="statusTxt">Verificando horário</span></span>
+      </div>
+      <h1>
+        <span class="line split kicker" data-split>RD Auto Mecânica</span>
+        <span class="line split" data-split style="--d:.2s">Seu carro em</span>
+        <span class="line split red" data-split style="--d:.4s">boas mãos.</span>
+      </h1>
+      <p class="sub fade-up d2"><span class="rot-line">Especialistas em <span class="rotator" id="rotator"><span class="on">nacionais</span><span>importados</span><span>4x4</span><span>diagnóstico</span></span></span>No Jardim São Cristóvão, em São Luís. Serviço explicado antes de começar, preço justo e nota máxima no Google.</p>
+      <div class="hero-btns fade-up d3">
+        <a href="https://wa.me/5598988233321?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20servi%C3%A7o." target="_blank" rel="noopener" class="btn btn-primary magnetic"><i class="fa-brands fa-whatsapp"></i> Agendar Serviço <i class="fa-solid fa-arrow-right arrow"></i></a>
+        <a href="#servicos" class="btn btn-outline magnetic"><i class="fa-solid fa-screwdriver-wrench"></i> Nossos Serviços</a>
+      </div>
+      <div class="hero-mini fade-up d4">
+        <div><i class="fa-solid fa-star"></i> <b>5,0</b> no Google · 50 avaliações</div>
+        <div><i class="fa-solid fa-oil-can"></i> Revisão grátis na compra do óleo</div>
+      </div>
+    </div>
+    <div class="stack" id="stack">
+      <div class="stack-card"><img src="assets/img/confianca.jpg" alt="Serviço automotivo de confiança"><span class="tag">ELEVADORES</span></div>
+      <div class="stack-card"><img src="assets/img/hilux.jpg" alt="Caminhonete no elevador"><span class="tag">4X4</span></div>
+      <div class="stack-card"><img src="assets/img/vapor.jpg" alt="Mecânico trabalhando"><span class="tag">MÃO NA MASSA</span></div>
+    </div>
+  </div>
+  <a href="#servicos" class="scroll-hint"><span class="mouse"></span>ROLE</a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-band"><div class="marquee" data-speed="1"><span>Mecânica Geral <i class="fa-solid fa-gear"></i> Diagnóstico <i class="fa-solid fa-gear"></i> Injeção Eletrônica <i class="fa-solid fa-gear"></i> Suspensão <i class="fa-solid fa-gear"></i> Freios <i class="fa-solid fa-gear"></i> Embreagem <i class="fa-solid fa-gear"></i> 4x4 <i class="fa-solid fa-gear"></i></span></div></div>
+  <div class="marquee-band dark"><div class="marquee" data-speed="-1"><span>Nacionais <i class="fa-solid fa-star"></i> Importados <i class="fa-solid fa-star"></i> 4x4 <i class="fa-solid fa-star"></i> Troca de óleo <i class="fa-solid fa-star"></i> Revisão <i class="fa-solid fa-star"></i></span></div></div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="5" data-dec="1">0</span><small>/5</small></div><p>Nota no Google Maps</p></div>
+    <div class="stat reveal"><div class="num"><span data-count="50">0</span><small>+</small></div><p>Avaliações de clientes</p></div>
+    <div class="stat reveal"><div class="num"><span data-count="12">0</span><small>+</small></div><p>Marcas atendidas</p></div>
+    <div class="stat reveal"><div class="num"><span data-count="6">0</span><small>dias</small></div><p>Abertos por semana</p></div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="subtitle">O que fazemos</span>
+      <h2><span class="mask-line"><span>Tudo que o seu carro</span></span><span class="mask-line"><span>precisa, em um só lugar</span></span></h2>
+      <p>Do carro do dia a dia à caminhonete 4x4. Equipe uniformizada, elevadores e equipamento de diagnóstico.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">01</span>
+        <div class="icon-box"><i class="fa-solid fa-gears"></i></div>
+        <h3>Mecânica Geral</h3>
+        <p>Motor, embreagem, arrefecimento, correias e tudo que mantém seu carro rodando com segurança.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">02</span>
+        <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Diagnóstico e Injeção</h3>
+        <p>Scanner para identificar falhas e luzes acesas no painel. Injeção eletrônica revisada sem chute e sem troca de peça à toa.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">03</span>
+        <div class="icon-box"><i class="fa-solid fa-car-burst"></i></div>
+        <h3>Suspensão e Freios</h3>
+        <p>Amortecedores, buchas, pastilhas, discos e fluido. Mais conforto na rua e frenagem segura.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">04</span>
+        <div class="icon-box"><i class="fa-solid fa-truck-pickup"></i></div>
+        <h3>4x4 Especializado</h3>
+        <p>Manutenção de caminhonetes e sistemas de tração 4x4, feita por quem conhece serviço pesado.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">05</span>
+        <div class="icon-box"><i class="fa-solid fa-oil-can"></i></div>
+        <h3>Troca de Óleo e Filtros</h3>
+        <p>Óleo e filtros na especificação certa para o seu motor. Comprou o óleo aqui, a revisão sai grátis.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="service-card reveal tilt"><div class="spot"></div><span class="num-bg">06</span>
+        <div class="icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>Revisão Preventiva</h3>
+        <p>Checklist completo para evitar surpresa na estrada. Nacionais e importados, com tudo explicado antes.</p>
+        <a class="more" href="#contato">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="container">
+    <span class="quote-mark">“</span>
+    <p class="scroll-text" id="scrollText">Aqui seu carro recebe *cuidado* *de* *verdade.* Primeiro o diagnóstico, depois o orçamento explicado e só então o serviço. *Sem* *surpresa* no final.</p>
+    <div class="sign"><img src="assets/img/logo.webp" alt=""> Equipe RD Auto Mecânica · Deus seja louvado</div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="subtitle">Como funciona</span>
+      <h2><span class="mask-line"><span>Do WhatsApp ao carro pronto</span></span></h2>
+    </div>
+    <div class="steps" id="steps">
+      <div class="steps-line"><i id="stepsLine"></i></div>
+      <div class="step"><div class="circle"><i class="fa-brands fa-whatsapp"></i></div><small>PASSO 01</small><h3>Você chama</h3><p>Conta o que está acontecendo e combinamos o melhor horário.</p></div>
+      <div class="step"><div class="circle"><i class="fa-solid fa-laptop-code"></i></div><small>PASSO 02</small><h3>Diagnóstico</h3><p>Avaliamos o veículo com scanner e olho treinado.</p></div>
+      <div class="step"><div class="circle"><i class="fa-solid fa-clipboard-check"></i></div><small>PASSO 03</small><h3>Orçamento claro</h3><p>Você entende o que precisa ser feito antes de aprovar.</p></div>
+      <div class="step"><div class="circle"><i class="fa-solid fa-car"></i></div><small>PASSO 04</small><h3>Carro pronto</h3><p>Serviço feito com cuidado e entregue no combinado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div class="map-wrap reveal reveal-clip">
+      <iframe src="https://www.google.com/maps?q=RD+Auto+Mec%C3%A2nica+Oficina,+S%C3%A3o+Lu%C3%ADs+-+MA&ll=-2.5719867,-44.2309189&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa RD Auto Mecânica" allowfullscreen></iframe>
+      <div class="map-chip"><img src="assets/img/logo.webp" alt=""><div><b>RD Auto Mecânica</b><span>Jardim São Cristóvão</span></div></div>
+      <a href="https://www.google.com/maps/place/RD+Auto+Mec%C3%A2nica+Oficina/@-2.5719867,-44.2309189,17z/data=!4m6!3m5!1s0x7f69b7b5322d2e1:0x52663998a3064c77!8m2!3d-2.5719867!4d-44.2309189!16s%2Fg%2F11zbp0rrvl" target="_blank" rel="noopener" class="map-link"><i class="fa-solid fa-location-dot"></i> Abrir rota no Google Maps <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="about-text reveal">
+      <span class="subtitle">Sobre Nós</span>
+      <h2><span class="mask-line"><span>Oficina de bairro com</span></span><span class="mask-line"><span>estrutura de oficina grande</span></span></h2>
+      <p class="lead">A RD Auto Mecânica abriu as portas em junho de 2026 no Jardim São Cristóvão com um objetivo simples: tratar cada carro como se fosse da família. Elevadores, equipamento de diagnóstico e uma equipe que explica o que precisa ser feito antes de colocar a mão no seu veículo.</p>
+      <ul class="info-list">
+        <li><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><strong>Endereço</strong><span>R. José Sarney, nº 36, Qd. 237, Jardim São Cristóvão, São Luís - MA, 65055-300</span></div></li>
+        <li><div class="ic"><i class="fa-solid fa-clock"></i></div><div><strong>Horário de funcionamento</strong>
+          <div class="hours" id="hours"><span data-d="1-5">Segunda a sexta</span><span data-d="1-5">08h às 18h</span><span data-d="6">Sábado</span><span data-d="6">08h às 14h</span><span data-d="0">Domingo</span><span data-d="0">Com agendamento</span></div></div></li>
+        <li><div class="ic"><i class="fa-solid fa-credit-card"></i></div><div><strong>Formas de pagamento</strong><span>Pix, cartão de crédito e débito</span></div></li>
+        <li><div class="ic"><i class="fa-solid fa-shield-halved"></i></div><div><strong>Nosso compromisso</strong><span>Revisão grátis na compra do óleo e serviço explicado antes de começar.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<div class="brands">
+  <p>MARCAS QUE ATENDEMOS</p>
+  <div class="brands-mask"><div class="logo-loop" id="logoLoop"></div></div>
+</div>
+
+<!-- INSTAGRAM / GALERIA -->
+<section class="insta" id="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="subtitle">Galeria</span>
+      <h2><span class="mask-line"><span>Acompanhe a rotina</span></span><span class="mask-line"><span>da oficina</span></span></h2>
+      <p>Toque nos destaques para ver os stories e nas fotos para ampliar.</p>
+    </div>
+    <div class="ig-shell reveal">
+      <div class="ig-head">
+        <div class="ig-avatar"><div class="ig-avatar-in"><img src="assets/img/logo.webp" alt="RD Auto Mecânica"></div></div>
+        <div>
+          <div class="ig-user"><h3>rdautomecanicaslz</h3><a class="ig-follow" href="https://www.instagram.com/rdautomecanicaslz/" target="_blank" rel="noopener">Seguir</a></div>
+          <div class="ig-counts"><span><b>19</b> posts</span><span><b>259</b> seguidores</span><span><b>128</b> seguindo</span></div>
+          <div class="ig-bio"><b>RD Auto Mecânica (SLZ)</b><br><span class="cat">Oficina mecânica</span><br>🔧 Oficina automotiva especializada<br>🚗 Nacionais • Importados • 4x4<br>⚙️ Revisão • Injeção • Embreagem<br>🛠️ Suspensão • Freios • Diagnóstico<br>📍 São Luís - MA</div>
+        </div>
+      </div>
+      <div class="ig-highlights">
+        <button class="hl" data-story="0"><div class="hl-ring"><div class="hl-in"><i class="fa-solid fa-clock"></i></div></div><span>Horários</span></button>
+        <button class="hl" data-story="1"><div class="hl-ring"><div class="hl-in"><i class="fa-solid fa-location-dot"></i></div></div><span>📍Localização</span></button>
+        <button class="hl" data-story="2"><div class="hl-ring"><div class="hl-in"><img src="assets/img/troca-de-oleo.jpg" alt=""></div></div><span>Troca de óleo 🔩</span></button>
+        <button class="hl" data-story="3"><div class="hl-ring"><div class="hl-in"><img src="assets/img/cuidado.jpg" alt=""></div></div><span>Revisão 🔧</span></button>
+      </div>
+      <div class="ig-tabs"><span class="on"><i class="fa-solid fa-table-cells"></i> PUBLICAÇÕES</span><span><i class="fa-solid fa-play"></i> REELS</span></div>
+      <div class="ig-grid" id="igGrid"></div>
+      <div class="ig-cta"><a class="btn btn-dark magnetic" href="https://www.instagram.com/rdautomecanicaslz/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram grad"></i> Ver mais no Instagram</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="reviews" id="avaliacoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="subtitle">Avaliações</span>
+      <h2><span class="mask-line"><span>O que nossos clientes dizem</span></span></h2>
+      <p>Nota máxima no Google, conquistada carro por carro.</p>
+    </div>
+  </div>
+  <div class="carousel reveal"><div class="track" id="track"></div></div>
+  <a href="https://www.google.com/maps/place/RD+Auto+Mec%C3%A2nica+Oficina/@-2.5719867,-44.2309189,17z/data=!4m6!3m5!1s0x7f69b7b5322d2e1:0x52663998a3064c77!8m2!3d-2.5719867!4d-44.2309189!16s%2Fg%2F11zbp0rrvl" target="_blank" rel="noopener" class="google-badge reveal">
+    <i class="fa-brands fa-google"></i>
+    <span>Nota <b>5,0</b> com base em <b>50</b> avaliações no Google Maps</span>
+  </a>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="subtitle">Contato</span>
+      <h2><span class="mask-line"><span>Agende seu Serviço</span></span></h2>
+      <p>Preencha os dados e a sua mensagem chega direto no nosso WhatsApp.</p>
+    </div>
+    <div class="contact-box reveal">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field"><input type="text" id="nome" placeholder=" " required><label for="nome">Nome</label></div>
+        <div class="field"><input type="tel" id="tel" placeholder=" " required><label for="tel">Telefone / WhatsApp</label></div>
+        <div class="field"><input type="text" id="veiculo" placeholder=" " required><label for="veiculo">Veículo (modelo/ano)</label></div>
+        <div class="field"><textarea id="msg" placeholder=" "></textarea><label for="msg">Mensagem</label></div>
+        <button type="submit" class="btn btn-primary" id="sendBtn"><span class="lbl"><i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp</span><span class="ok"><i class="fa-solid fa-check"></i> Abrindo o WhatsApp</span></button>
+      </form>
+      <div class="contact-side">
+        <h3>Precisa de um orçamento?</h3>
+        <p>Chame a gente. Respondemos rápido e já combinamos o melhor horário para você trazer o carro.</p>
+        <a href="https://wa.me/5598988233321" target="_blank" rel="noopener" class="contact-item">
+          <div class="round bg-whats"><i class="fa-brands fa-whatsapp"></i></div>
+          <div><strong>WhatsApp</strong><span>(98) 98823-3321 · (98) 98580-8538</span></div><i class="fa-solid fa-arrow-right go"></i>
+        </a>
+        <a href="tel:+5598988233321" class="contact-item">
+          <div class="round bg-phone"><i class="fa-solid fa-phone"></i></div>
+          <div><strong>Telefone</strong><span>(98) 98823-3321</span></div><i class="fa-solid fa-arrow-right go"></i>
+        </a>
+        <a href="https://www.google.com/maps/place/RD+Auto+Mec%C3%A2nica+Oficina/@-2.5719867,-44.2309189,17z/data=!4m6!3m5!1s0x7f69b7b5322d2e1:0x52663998a3064c77!8m2!3d-2.5719867!4d-44.2309189!16s%2Fg%2F11zbp0rrvl" target="_blank" rel="noopener" class="contact-item">
+          <div class="round bg-map"><i class="fa-solid fa-location-dot"></i></div>
+          <div><strong>Localização</strong><span>Jardim São Cristóvão, São Luís - MA</span></div><i class="fa-solid fa-arrow-right go"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="giant" id="giant"><span id="giantIn">RD AUTO MECÂNICA</span></div>
+  <div class="container foot-row">
+    <p>© <span id="ano"></span> RD Auto Mecânica. Todos os direitos reservados.</p>
+    <span class="foot-tag">Deus seja louvado</span>
+    <div class="socials">
+      <a href="https://www.instagram.com/rdautomecanicaslz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/5598988233321" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.google.com/maps/place/RD+Auto+Mec%C3%A2nica+Oficina/@-2.5719867,-44.2309189,17z/data=!4m6!3m5!1s0x7f69b7b5322d2e1:0x52663998a3064c77!8m2!3d-2.5719867!4d-44.2309189!16s%2Fg%2F11zbp0rrvl" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+      <button class="to-top" id="toTop"><i class="fa-solid fa-arrow-up"></i> Topo</button>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5598988233321" target="_blank" rel="noopener" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="tip">Fale com a gente agora</span></a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-bg" id="lbBg"></div>
+  <img class="lb-img" id="lbImg" alt="">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<!-- STORIES -->
+<div class="story" id="story">
+  <div class="story-frame">
+    <div class="story-bars" id="storyBars"></div>
+    <div class="story-top"><img src="assets/img/logo.webp" alt=""><span id="storyName">rdautomecanicaslz</span><button id="storyClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="story-slide"><div class="story-html">
+      <img class="lg" src="assets/img/logo.webp" alt="">
+      <h4>HORÁRIO DE <span>FUNCIONAMENTO</span></h4>
+      <div class="story-row">SEGUNDA A SEXTA <span>08:00 às 18:00</span></div>
+      <div class="story-row">SÁBADO <span>08:00 às 14:00</span></div>
+      <div class="story-row">DOMINGO <span>Agendamento</span></div>
+    </div></div>
+    <div class="story-slide"><div class="story-html" style="text-align:center">
+      <img class="lg" src="assets/img/logo.webp" alt="">
+      <h4>NOSSO <span>ENDEREÇO</span></h4>
+      <div class="story-row" style="justify-content:center;text-align:center">Rua José Sarney, Nº 36, QD 237<br>Jardim São Cristóvão</div>
+      <a href="https://www.google.com/maps/place/RD+Auto+Mec%C3%A2nica+Oficina/@-2.5719867,-44.2309189,17z/data=!4m6!3m5!1s0x7f69b7b5322d2e1:0x52663998a3064c77!8m2!3d-2.5719867!4d-44.2309189!16s%2Fg%2F11zbp0rrvl" target="_blank" rel="noopener" class="btn btn-primary" style="position:relative;z-index:6"><i class="fa-solid fa-location-dot"></i> Abrir no Maps</a>
+    </div></div>
+    <div class="story-slide"><img src="assets/img/troca-de-oleo.jpg" alt="Troca de óleo"></div>
+    <div class="story-slide"><img src="assets/img/cuidado.jpg" alt="Revisão"></div>
+    <div class="story-nav l" id="storyL"></div><div class="story-nav r" id="storyR"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
